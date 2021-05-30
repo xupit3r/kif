@@ -1,0 +1,29 @@
+{
+  "name": "kif",
+  "version": "1.0.0",
+  "description": "a simple web scraper task assigner/runner",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xupit3r/kif.git"
+  },
+  "keywords": [
+    "task",
+    "runner"
+  ],
+  "author": "Joe D'Alessandro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xupit3r/kif/issues"
+  },
+  "homepage": "https://github.com/xupit3r/kif#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "htmlparser2": "^6.1.0",
+    "sanitize-html": "^2.4.0",
+    "uuid": "^8.3.2"
+  }
+}
