@@ -1,9 +1,9 @@
-const { Worker } = require('worker_threads');
+const manager = require('./lib/manager.js');
+const events = require('./lib/events.js');
+const { MESSAGE_NEW_LINKS } = require('./lib/messages.js');
 
-const worker = new Worker('./lib/kiffy.js', {
-  workerData: {
-    url: 'http://thejoeshow.net'
-  }
-});
+manager();
 
-worker.on('message', data => console.log(data));
+events.emit(MESSAGE_NEW_LINKS, [
+  'http://thejoeshow.net'
+]);
