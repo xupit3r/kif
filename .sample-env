@@ -1,0 +1,6 @@
+# these should be copied to a .env file
+# and filled out with the relevant credentials
+MONGO_USERNAME=username
+MONGO_PASSWORD=password
+MONGO_DBNAME=dbname
+MONGO_CONNECTION_STRING=mongodb://username:password@localhost:27017/?authMechanism=DEFAULT
