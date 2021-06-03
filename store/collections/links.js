@@ -22,14 +22,15 @@ client.connect((err) => {
   const collection = db.collection(COLLECTION_NAME);
 
   // listen for link add events and add them to the  collection
-  events.on(messages.MESSAGE_NEW_LINKS, (links) => {
-    if (links.length > 0) {
-      collection.insertMany(links, (err, { ops: docs }) => {
+  events.on(messages.MESSAGE_PROCESSED_LINK, (link) => {
+    if (typeof link !== 'undefined') {
+      collection.insertOne(link, (err) => {
         if (err) {
+          debug(`failed to add ${link.linkId} to the collection.`);
           return debug(err);
         }
   
-        debug(`added ${docs.length} links to the collection.`);
+        debug(`added ${link.linkId} to the collection.`);
       });
     }
   });
