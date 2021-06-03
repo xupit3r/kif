@@ -3,6 +3,7 @@ const MongoClient = require('mongodb').MongoClient;
 
 // our collections
 const links = require('./collections/links.js');
+const pages = require('./collections/pages.js');
 
 const client = new MongoClient(process.env.MONGO_CONNECTION_STRING, {
   useUnifiedTopology: true
@@ -30,7 +31,8 @@ module.exports = function initStore () {
       resolve({
         db: db,
         collections: {
-          links: links(db, debug)
+          links: links(db, debug),
+          pages: pages(db, debug)
         }
       });
     });
