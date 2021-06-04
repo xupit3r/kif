@@ -4,7 +4,7 @@
   "description": "a simple web scraper task assigner/runner",
   "main": "index.js",
   "scripts": {
-    "start": "DEBUG=manager,kiffy,store node index.js",
+    "start": "DEBUG=manager,kiffy,store:* node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "docker-start": "docker compose up -d",
     "docker-stop": "docker compose stop"
