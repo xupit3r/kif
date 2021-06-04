@@ -1,3 +1,6 @@
+# fix colors in worker thread(s)
+DEBUG_COLORS=true
+
 # these should be copied to a .env file
 # and filled out with the relevant credentials
 MONGO_USERNAME=username
